@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nota & Todo Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Focus mode</p>
+          <h1>Nota & Todo Studio</h1>
+        </div>
+        <button class="ghost" id="clearAll">Alles wissen</button>
+      </header>
+
+      <section class="hero">
+        <div class="hero-card">
+          <h2>Maak je dag moeiteloos helder</h2>
+          <p>
+            Een soepele ruimte voor snelle notities en stijlvolle to-do's. Bewaar alles
+            automatisch in je browser.
+          </p>
+          <div class="hero-actions">
+            <span>Auto-save</span>
+            <span>⌘ K focus</span>
+            <span>Dark luxe</span>
+          </div>
+        </div>
+      </section>
+
+      <main class="grid">
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Notities</h3>
+              <p>Ideeën, inzichten, snelle gedachten.</p>
+            </div>
+            <button class="primary" id="addNote">Nieuwe notitie</button>
+          </div>
+          <div class="note-editor">
+            <input id="noteTitle" type="text" placeholder="Titel" />
+            <textarea id="noteBody" rows="4" placeholder="Schrijf je notitie..."></textarea>
+          </div>
+          <div class="note-list" id="noteList"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <h3>Todo's</h3>
+              <p>Houd je flow strak en afgevinkt.</p>
+            </div>
+            <button class="primary" id="addTodo">Nieuwe taak</button>
+          </div>
+          <div class="todo-input">
+            <input id="todoText" type="text" placeholder="Wat wil je afronden?" />
+            <select id="todoPriority">
+              <option value="low">Lage energie</option>
+              <option value="medium" selected>Focus</option>
+              <option value="high">High impact</option>
+            </select>
+          </div>
+          <div class="todo-list" id="todoList"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
